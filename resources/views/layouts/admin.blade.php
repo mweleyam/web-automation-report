@@ -275,10 +275,14 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
     <li class="nav-item">
-        <a class="nav-link" href="index.html">
-            <i class="bi bi-grid"></i>
-            <span>Report Automation</span>
-        </a>
+        @if(Request::is('admin/home'))
+            <a class="nav-link" href="/admin/home">
+        @else
+            <a class="nav-link collapsed" href="/admin/home">
+        @endif
+                <i class="bi bi-grid"></i>
+                <span>Report Automation</span>
+            </a>
     </li><!-- End Report Nav -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="index.html">
